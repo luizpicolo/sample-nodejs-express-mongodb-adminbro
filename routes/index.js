@@ -9,6 +9,8 @@ router.get('/', function (req, res, next) {
     title: 'IFMS', 
     subtitle: 'Instituto Federal de Mato Grosso do Sul' 
   };
+
+  res.render('index', { title: json.title, subtitle: json.subtitle });
 });
 
 module.exports = router;
