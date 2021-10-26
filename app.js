@@ -14,7 +14,7 @@ const app = express();
 
 // Connection Mongoose
 const user = 'dbuser';
-const password = 'TyRhvo3ylYlcnYi9';
+const password = '';
 const cluster = 'cluster0.uzxus.mongodb.net';
 const db = 'dbuser';
 const uri = `mongodb+srv://${user}:${password}@${cluster}/${db}?retryWrites=true&w=majority`;
