@@ -27,6 +27,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Rotas
+app.use('/', index);
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -42,8 +45,6 @@ app.use(sassMiddleware({
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
-
-app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
